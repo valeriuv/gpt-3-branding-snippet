@@ -1,4 +1,3 @@
-
 import os
 import openai
 from decouple import config
@@ -32,7 +31,7 @@ def validate_length(prompt: str) -> bool:
 
 def generate_branding_snippet(prompt: str) -> str:
 	openai.api_key = config("OPENAI_API_KEY")
-	enriched_prompt = f"Generate upbeat branding snippet for {prompt}: "
+	enriched_prompt = f"Generate funny and upbeat branding snippet for {prompt}: "
 	print(enriched_prompt)
 
 	response = openai.Completion.create(
